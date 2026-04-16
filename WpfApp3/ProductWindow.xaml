@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp3.ProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        Title="Продукты" Height="800" Width="1200">
+    <Grid>
+
+        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="FullName" Grid.Row="0" HorizontalAlignment="Right"></TextBlock>
+
+        <ScrollViewer Grid.Row="1">
+            <ItemsControl x:Name="Lol">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Image Width="80" Height="80" Source="{Binding ImagePath}"></Image>
+
+                            <StackPanel Grid.Column="1">
+                                <TextBlock>
+
+                                </TextBlock>
+                            </StackPanel>
+                            
+                        </Grid>
+
+                        
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        
+        <Button x:Name="LogOut" Content="Выйти" HorizontalAlignment="Left" Grid.Row="2" Click="LogOut_Click"></Button>
+        
+        
+    </Grid>
+</Window>
