@@ -22,31 +22,34 @@
             <ItemsControl x:Name="Lol">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="Auto"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+                        <Border Background="{Binding background}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
 
 
-                            <Image Width="80" Height="80" Source="{Binding ImagePath}"></Image>
+                                <Image Width="80" Height="80" Source="{Binding ImagePath}"></Image>
 
-                            <StackPanel Grid.Column="1">
-                                <TextBlock>
-                                    <Run Text="{Binding Cat.CatName}"></Run>
-                                    <Run Text="{Binding Descrip}"></Run>
-                                    <Run Text=" | "></Run>
-                                </TextBlock>
-                            </StackPanel>
+                                <StackPanel Grid.Column="1">
+                                    <TextBlock>
+                                        <Run Text="{Binding Cat.CatName}"></Run>
+                                        <Run Text="{Binding Descrip}"></Run>
+                                        <Run Text=" | "></Run>
+                                    </TextBlock>
+                                </StackPanel>
 
-                            <StackPanel Grid.Column="2">
+                                <StackPanel Grid.Column="2">
 
-                                <TextBlock Text="{Binding Sale}"></TextBlock>
-                                
-                            </StackPanel>
-                            
-                        </Grid>
+                                    <TextBlock Text="{Binding Sale}"></TextBlock>
+
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+                        
 
                         
                     </DataTemplate>

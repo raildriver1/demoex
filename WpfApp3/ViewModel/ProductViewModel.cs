@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 using WpfApp3.Elements;
 
 namespace WpfApp3.ViewModel
@@ -28,6 +29,8 @@ namespace WpfApp3.ViewModel
             Manuf = product.Manuf;
             ProdNameNavigation = product.ProdNameNavigation;
             Sup = product.Sup;
+
+            getBackground();
         }
 
         public int IdProd { get; set; }
@@ -63,6 +66,25 @@ namespace WpfApp3.ViewModel
         public Supplier Sup { get; set; } = null!;
 
         public string ImagePath => "Images/" + Image;
+
+        public Brush background { get; set; }
+
+        public void getBackground()
+        {
+            if (Sale >= 15)
+            {
+                background = (Brush)new BrushConverter().ConvertFromString("#2e8b57");
+                return;
+            } else if (Count == 0)
+            {
+                background = Brushes.LightBlue;
+                return;
+            } else
+            {
+                background = (Brush)new BrushConverter().ConvertFromString("#7fff00");
+                return;
+            }
+        }
 
     }
 }
