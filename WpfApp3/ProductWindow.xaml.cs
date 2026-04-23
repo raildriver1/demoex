@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp3.Elements;
+using WpfApp3.ViewModel;
 
 namespace WpfApp3
 {
@@ -25,7 +26,12 @@ namespace WpfApp3
 
         public void LoadProducts()
         {
-            Lol.ItemsSource = dbContext.Products.ToList();
+            var products = dbContext.Products.ToList();
+            List<ProductViewModel> productViewModels = new List<ProductViewModel>();
+            foreach (var p in products) { 
+                productViewModels.Add(new ProductViewModel(p));
+            }
+            Lol.ItemsSource = productViewModels;
         }
 
         public ProductWindow()

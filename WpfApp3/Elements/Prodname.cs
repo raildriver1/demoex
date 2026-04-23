@@ -10,4 +10,5 @@ public partial class Prodname
     public string ProdName1 { get; set; } = null!;
 
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+
 }

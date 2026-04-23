@@ -104,3 +104,4 @@ C:\Users\8888\source\repos\WpfApp3\WpfApp3\bin\Debug\net8.0-windows\Pomelo.Entit
 C:\Users\8888\source\repos\WpfApp3\WpfApp3\obj\Debug\net8.0-windows\App.baml
 C:\Users\8888\source\repos\WpfApp3\WpfApp3\obj\Debug\net8.0-windows\ProductWindow.g.cs
 C:\Users\8888\source\repos\WpfApp3\WpfApp3\obj\Debug\net8.0-windows\ProductWindow.baml
+C:\Users\8888\source\repos\WpfApp3\WpfApp3\obj\Debug\net8.0-windows\WpfApp3.sourcelink.json
