@@ -31,6 +31,7 @@ namespace WpfApp3.ViewModel
             Sup = product.Sup;
 
             getBackground();
+            getPhoto();
         }
 
         public int IdProd { get; set; }
@@ -84,6 +85,14 @@ namespace WpfApp3.ViewModel
                 background = (Brush)new BrushConverter().ConvertFromString("#7fff00");
                 return;
             }
+        }
+
+        public void getPhoto()
+        {
+            if (!string.IsNullOrEmpty(Image) || Image != "")
+                return;
+
+            Image = "picture.png";
         }
 
     }
